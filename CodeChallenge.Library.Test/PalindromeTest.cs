@@ -2,11 +2,15 @@ namespace CodeChallenge.Library.Test
 {
     public class PalindromeTest
     {
-        [Fact]
-        public void When_madam()
+        [Theory]
+        [InlineData("madam",true)]//true
+        [InlineData("step on no pets",true)]//true
+        [InlineData("book",false)]//false
+        [InlineData("bookddd", false)]//false
+        public void WhenCase(string input,bool expected)
         {
-            bool result = Palindrome.GetValue("madam");
-            Assert.True(result);
+            bool Actual= Palindrome.GetValue(input);
+            Assert.Equal(expected, Actual);
             
         }
     }

@@ -8,9 +8,9 @@ namespace CodeChallenge.Library
         {
             char[] cr=input.ToCharArray();
             string ouput = string.Empty;
-            for(int i=cr.Length;i>=0;i--)
+            for(int i=cr.Length;i>0;i--)
             {
-                ouput += cr[i];
+                ouput += cr[i-1].ToString();
             }
             if (input == ouput) return true;
                 return false;
