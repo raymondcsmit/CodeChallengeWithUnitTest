@@ -1,11 +1,19 @@
-﻿namespace CodeChallenge.Library
+﻿using System.Runtime.InteropServices;
+
+namespace CodeChallenge.Library
 {
     public class Palindrome
     {
         public static bool GetValue(string input)
         {
-            
-            return false;
+            char[] cr=input.ToCharArray();
+            string ouput = string.Empty;
+            for(int i=cr.Length;i>=0;i--)
+            {
+                ouput += cr[i];
+            }
+            if (input == ouput) return true;
+                return false;
         }
     }
 }
